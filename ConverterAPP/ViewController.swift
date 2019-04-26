@@ -25,7 +25,15 @@ class ViewController: UIViewController {
     @IBAction func slectAUnit(_ sender: UIButton) {
         
         unitCollection.forEach { (button) in
-            button.isHidden = !button.isHidden
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                   button.isHidden = !button.isHidden
+                    self.view.layoutIfNeeded()
+            
+            
+            
+            })
+         
         
         }
         
@@ -33,8 +41,22 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func unitTapped(_ sender: Any) {
-        
+    
+    // handle when a unit is tapped to get value
+    
+    // TODO needs to be added latter 
+    
+//    enum unitCollection: String{
+//       // case ButtonOne = 'ft'
+//
+//
+//    }
+    @IBAction func unitTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle  else {
+            
+            
+            return
+        }
         
         
     }
