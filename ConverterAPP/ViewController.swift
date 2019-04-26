@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet var unitCollection: [UIButton]!
     
     override func viewDidLoad() {
@@ -21,8 +20,23 @@ class ViewController: UIViewController {
 
 
     
-    @IBAction func slectAUnit(_ sender: Any) {
+    // handle selction for class
+    
+    @IBAction func slectAUnit(_ sender: UIButton) {
+        
+        unitCollection.forEach { (button) in
+            button.isHidden = !button.isHidden
+        
+        }
+        
+        
+        
     }
     
+    @IBAction func unitTapped(_ sender: Any) {
+        
+        
+        
+    }
 }
 

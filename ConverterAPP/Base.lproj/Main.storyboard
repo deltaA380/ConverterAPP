@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-ii-vPE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="220"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="20"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dca-97-gVg">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
@@ -31,40 +31,55 @@
                                             <action selector="slectAUnit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eC2-wv-1Ig"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eod-cP-OmP">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="20"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eod-cP-OmP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="s4i-vn-fUZ"/>
                                         </constraints>
                                         <state key="normal" title="ButtonPrimary"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRF-h7-WhJ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-8M-eIe">
-                                        <rect key="frame" x="0.0" y="80" width="375" height="20"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-8M-eIe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="gL6-VT-GGA"/>
                                         </constraints>
                                         <state key="normal" title="Button2"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="geO-Bi-a1z"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-eF-9hM">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="20"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-eF-9hM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="fWH-XD-UoX"/>
                                         </constraints>
                                         <state key="normal" title="Button3"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cww-2w-bDF"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw6-xH-5S7">
-                                        <rect key="frame" x="0.0" y="160" width="375" height="20"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw6-xH-5S7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Zyb-DS-0LL"/>
                                         </constraints>
                                         <state key="normal" title="Button4"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBq-Nk-ev8"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGP-Bh-VD4">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="20"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGP-Bh-VD4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="YBQ-7L-INj"/>
                                         </constraints>
                                         <state key="normal" title="Button5"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OgE-fH-GwZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -92,10 +107,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outletCollection property="unitButtons" destination="eod-cP-OmP" collectionClass="NSMutableArray" id="l63-9N-bpe"/>
-                        <outletCollection property="unitButtons" destination="gjG-8M-eIe" collectionClass="NSMutableArray" id="epl-k3-gWb"/>
-                        <outletCollection property="unitButtons" destination="gc2-eF-9hM" collectionClass="NSMutableArray" id="lRj-Y7-d39"/>
-                        <outletCollection property="unitCollection" destination="eod-cP-OmP" collectionClass="NSMutableArray" id="rph-Jn-pwA"/>
                         <outletCollection property="unitCollection" destination="gjG-8M-eIe" collectionClass="NSMutableArray" id="yeA-wL-grk"/>
                         <outletCollection property="unitCollection" destination="gc2-eF-9hM" collectionClass="NSMutableArray" id="CsP-8h-qU2"/>
                         <outletCollection property="unitCollection" destination="fw6-xH-5S7" collectionClass="NSMutableArray" id="Nzq-tR-BaY"/>
