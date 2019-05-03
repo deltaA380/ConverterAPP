@@ -47,30 +47,35 @@ class ViewController: UIViewController {
     // TODO needs to be added latter
     
     /// equal to boton names
-      enum unitCollection: int {
-        case s  = 12
+      enum convertFactors: String {
+        case ftIN  = "Feet"
  
 
-   }
-    @IBAction func unitTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle  else {
-            
-        }
-        
-        var converterFactor = 0
-            
-            switch( unitCollection) {
-                
-                
-                case .s:
-                    converterFactor = unitCollection
-                
-                default:
-                    converterFactor = 0
-                
-                
-                }
-        
     }
+    @IBAction func unitTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let setConversionFactir = convertFactors(rawValue: title) else {
+            return
+        }
+        var converterFactor = 0
+        
+        
+        // set converter factor
+            switch( setConversionFactir) {
+                
+                
+                    case .ftIN:
+                        converterFactor =  12
+                
+                    default:
+                        converterFactor = 0
+                
+                
+                    }
+        
+        }
+    
+    // do the math here to get units
 }
+
+
 
