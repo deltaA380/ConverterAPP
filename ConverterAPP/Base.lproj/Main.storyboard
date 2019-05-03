@@ -26,7 +26,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="23m-Z9-Mwj"/>
                                         </constraints>
-                                        <state key="normal" title="slector"/>
+                                        <state key="normal" title="Selector"/>
                                         <connections>
                                             <action selector="slectAUnit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eC2-wv-1Ig"/>
                                         </connections>
@@ -46,7 +46,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="gL6-VT-GGA"/>
                                         </constraints>
-                                        <state key="normal" title="Button2"/>
+                                        <state key="normal" title="Inches"/>
                                         <connections>
                                             <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="geO-Bi-a1z"/>
                                         </connections>
@@ -56,7 +56,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="fWH-XD-UoX"/>
                                         </constraints>
-                                        <state key="normal" title="Button3"/>
+                                        <state key="normal" title="Feet"/>
                                         <connections>
                                             <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cww-2w-bDF"/>
                                         </connections>
@@ -66,7 +66,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Zyb-DS-0LL"/>
                                         </constraints>
-                                        <state key="normal" title="Button4"/>
+                                        <state key="normal" title="Yards"/>
                                         <connections>
                                             <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBq-Nk-ev8"/>
                                         </connections>
@@ -76,7 +76,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="YBQ-7L-INj"/>
                                         </constraints>
-                                        <state key="normal" title="Button5"/>
+                                        <state key="normal" title="Miles"/>
                                         <connections>
                                             <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OgE-fH-GwZ"/>
                                         </connections>
