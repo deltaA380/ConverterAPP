@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             
             
             })
-         
+        
         
         }
         
@@ -44,20 +44,32 @@ class ViewController: UIViewController {
     
     // handle when a unit is tapped to get value
     
-    // TODO needs to be added latter 
+    // TODO needs to be added latter
     
-//    enum unitCollection: String{
-//       // case ButtonOne = 'ft'
-//
-//
-//    }
+    /// equal to boton names
+      enum unitCollection: int {
+        case s  = 12
+ 
+
+   }
     @IBAction func unitTapped(_ sender: UIButton) {
         guard let title = sender.currentTitle  else {
             
-            
-            return
         }
         
+        var converterFactor = 0
+            
+            switch( unitCollection) {
+                
+                
+                case .s:
+                    converterFactor = unitCollection
+                
+                default:
+                    converterFactor = 0
+                
+                
+                }
         
     }
 }
