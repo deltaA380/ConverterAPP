@@ -10,7 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var unitCollection: [UIButton]!
+    
+    @IBOutlet weak var textInput: UITextField!
+    
+    @IBOutlet weak var textOutput: UITextField!
+    
+    var convertUnits = false
+    
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -22,59 +32,57 @@ class ViewController: UIViewController {
     @IBAction func slectAUnit(_ sender: UIButton) {
         
         unitCollection.forEach { (button) in
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                   button.isHidden = !button.isHidden
-                    self.view.layoutIfNeeded()
-            
-            
-            
-            })
-        
+            button.isHidden = !button.isHidden
         
         }
         
         
         
     }
-    
-    
-    // handle when a unit is tapped to get value
-    
-    // TODO needs to be added latter
-    
-    /// equal to boton names
-      enum convertFactors: String {
-        case ftIN  = "Feet"
- 
 
-    }
+// handle when a unit is tapped to get value
 
+// TODO needs to be added latter
 
-    @IBAction func unitTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let setConversionFactir = convertFactors(rawValue: title) else {
-            return
-        }
-        var converterFactor = 0
-        
-        
-        // set converter factor
-            switch( setConversionFactir) {
-                
-                
-                    case .ftIN:
-                        converterFactor =  12
-                
-                    default:
-                        converterFactor = 0
-                
-                
-                    }
-        
-        }
-    
-    // do the math here to get units
+/// equal to boton names
+enum convertFactors: String {
+    case ftIN = "Feet"
+    case inFT = "Inches"
+    case ftYD = "Yards"
+    case ftMI = "Miles"
 }
 
 
-
+@IBAction func unitTapped(_ sender: UIButton) {
+      let unitInput = Double (textInput.text!) ?? 0
+    
+    guard let title = sender.currentTitle, let setConversionFactor = convertFactors(rawValue: title) else {
+        return
+    }
+    
+    var converterFactor = Double(0)
+    
+    // need to make sure stufff is executed
+    // set converter factor
+    switch(setConversionFactor) {
+        case .ftIN:
+            converterFactor = 12
+            convertUnits = true
+        case .inFT:
+            converterFactor = 1 / 12
+            convertUnits = true
+        case .ftYD:
+            converterFactor = 1 / 3
+            convertUnits = true
+        case .ftMI:
+            converterFactor = 1 / 5280
+            convertUnits = true
+    }
+    
+    let total = (converterFactor) *  unitInput
+    
+    
+    textOutput.text = String(total)
+    
+    }
+}

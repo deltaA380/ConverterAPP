@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,125 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConverterAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-ii-vPE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dca-97-gVg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="23m-Z9-Mwj"/>
+                                        </constraints>
+                                        <state key="normal" title="Selector"/>
+                                        <connections>
+                                            <action selector="slectAUnit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eC2-wv-1Ig"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eod-cP-OmP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="s4i-vn-fUZ"/>
+                                        </constraints>
+                                        <state key="normal" title="ButtonPrimary"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRF-h7-WhJ"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-8M-eIe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="gL6-VT-GGA"/>
+                                        </constraints>
+                                        <state key="normal" title="Inches"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="geO-Bi-a1z"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-eF-9hM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="fWH-XD-UoX"/>
+                                        </constraints>
+                                        <state key="normal" title="Feet"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cww-2w-bDF"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw6-xH-5S7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Zyb-DS-0LL"/>
+                                        </constraints>
+                                        <state key="normal" title="Yards"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBq-Nk-ev8"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGP-Bh-VD4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="YBQ-7L-INj"/>
+                                        </constraints>
+                                        <state key="normal" title="Miles"/>
+                                        <connections>
+                                            <action selector="unitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OgE-fH-GwZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eod-cP-OmP" secondAttribute="trailing" id="B8h-q4-KbT"/>
+                                    <constraint firstItem="gc2-eF-9hM" firstAttribute="leading" secondItem="SQt-ii-vPE" secondAttribute="leading" id="FxK-iA-bzI"/>
+                                    <constraint firstAttribute="trailing" secondItem="MGP-Bh-VD4" secondAttribute="trailing" id="GZR-IM-Zvj"/>
+                                    <constraint firstAttribute="trailing" secondItem="gjG-8M-eIe" secondAttribute="trailing" id="Qz3-TL-Vvi"/>
+                                    <constraint firstItem="eod-cP-OmP" firstAttribute="leading" secondItem="SQt-ii-vPE" secondAttribute="leading" id="R9L-xh-TgN"/>
+                                    <constraint firstAttribute="trailing" secondItem="fw6-xH-5S7" secondAttribute="trailing" id="T8c-Am-OOr"/>
+                                    <constraint firstItem="MGP-Bh-VD4" firstAttribute="leading" secondItem="SQt-ii-vPE" secondAttribute="leading" id="WEp-zx-IU3"/>
+                                    <constraint firstItem="fw6-xH-5S7" firstAttribute="leading" secondItem="SQt-ii-vPE" secondAttribute="leading" id="a2U-zf-Zkj"/>
+                                    <constraint firstAttribute="trailing" secondItem="dca-97-gVg" secondAttribute="trailing" id="hnR-Kn-53Z"/>
+                                    <constraint firstItem="dca-97-gVg" firstAttribute="leading" secondItem="SQt-ii-vPE" secondAttribute="leading" id="rCh-fS-p3o"/>
+                                    <constraint firstAttribute="trailing" secondItem="gc2-eF-9hM" secondAttribute="trailing" id="wTb-Rf-5Hq"/>
+                                    <constraint firstItem="gjG-8M-eIe" firstAttribute="leading" secondItem="SQt-ii-vPE" secondAttribute="leading" id="zhe-jN-nlh"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="civ-pd-ufo">
+                                <rect key="frame" x="84" y="451" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hn6-jZ-0xU">
+                                <rect key="frame" x="90" y="318" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SQt-ii-vPE" secondAttribute="trailing" id="Dwe-FU-h0R"/>
+                            <constraint firstItem="SQt-ii-vPE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MLE-bR-Pts"/>
+                            <constraint firstItem="SQt-ii-vPE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RPj-e0-2AA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textInput" destination="Hn6-jZ-0xU" id="UWg-AR-x9K"/>
+                        <outlet property="textOutput" destination="civ-pd-ufo" id="KjN-xs-Fyn"/>
+                        <outletCollection property="unitCollection" destination="gjG-8M-eIe" collectionClass="NSMutableArray" id="yeA-wL-grk"/>
+                        <outletCollection property="unitCollection" destination="gc2-eF-9hM" collectionClass="NSMutableArray" id="CsP-8h-qU2"/>
+                        <outletCollection property="unitCollection" destination="fw6-xH-5S7" collectionClass="NSMutableArray" id="Nzq-tR-BaY"/>
+                        <outletCollection property="unitCollection" destination="MGP-Bh-VD4" collectionClass="NSMutableArray" id="1cj-if-fAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="874" y="-98"/>
         </scene>
     </scenes>
 </document>
